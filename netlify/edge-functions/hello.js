@@ -1,15 +1,6 @@
-// hello there!
-// 
-// I'm a serverless function that you can deploy as part of your site.
-// I'll get deployed to AWS Lambda, but you don't need to know that. 
-// You can develop and deploy serverless functions right here as part
-// of your site. Netlify Functions will handle the rest for you.
-
-
-exports.handler = async event => {
+export default () => {
     const envs = JSON.stringify(process.env, null, 2);
-    return {
-        statusCode: 200,
-        body: envs
-    }
+    new Response("env: " + envs);
 }
+
+export const config = { path: "/test" };
