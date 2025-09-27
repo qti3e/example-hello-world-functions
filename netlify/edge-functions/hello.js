@@ -39,7 +39,7 @@ async function serve(req) {
         "content-type": "application/json; charset=utf-8",
     });
     pHeadersToResponse(req.headers, resHeaders);
-    const body = JSON.stringify({ ...headersObj, "x-time": Date.now(), "x-time-utc": (new Date("Fri Jan 20 2012 11:51:36 GMT-0500").toUTCString()) }, null, 2);
+    const body = JSON.stringify({ ...headersObj, "x-time": Date.now(), "x-time-utc": (new Date().toUTCString()) }, null, 2);
     return new Response(body, { status: 200, headers: resHeaders });
 }
 
