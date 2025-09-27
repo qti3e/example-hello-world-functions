@@ -45,4 +45,4 @@ async function serve(req) {
 
 export default (r) => serve(r);
 
-export const config = { path: "/test" };
+export const config = { cache: "manual", path: "/test" };
