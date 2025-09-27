@@ -43,6 +43,6 @@ async function serve(req) {
     return new Response(body, { status: 200, headers: resHeaders });
 },
 
-export default serve;
+export default (r) => serve(r);
 
 export const config = { path: "/test" };
