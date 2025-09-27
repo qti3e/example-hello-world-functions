@@ -41,7 +41,7 @@ async function serve(req) {
     pHeadersToResponse(req.headers, resHeaders);
     const body = JSON.stringify({ ...headersObj, "x-time": Date.now() }, null, 2);
     return new Response(body, { status: 200, headers: resHeaders });
-},
+}
 
 export default (r) => serve(r);
 
